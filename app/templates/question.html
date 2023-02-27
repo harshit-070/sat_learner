@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="question_container">
+  <div class="ques-div_2">
+    <form method="post" novalidate>
+      <h2 class="qnum_2">Question {{q.q_id}}</h2>
+      <div class="dotted-spaced_2"></div>
+      <hr />
+      <h1 class="ques-heading_2">{{q.ques}}</h1>
+      <div class="options-div_2">{{ form.options(class="list-unstyled") }}</div>
+      {{ form.submit(class="btn btn-primary btn-lg sub-btn btn_2") }}
+    </form>
+  </div>
+  <img src="{{ url_for('video') }}" class="video_2" />
+</div>
+
+{% endblock %}
